@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:nee/main.dart';
 
@@ -37,37 +38,41 @@ class _SahilState extends State<Sahil> {
         ),
         body: Center(
           child: Container(
-              padding: EdgeInsetsDirectional.all(20.0),
-              child: Column(
-                  children: [
-              TextFormField(
-              decoration: const InputDecoration(
-              icon: Icon(Icons.email_outlined),
-              hintText: 'Email Address',
-              labelText: 'Email'
+            padding: EdgeInsetsDirectional.all(20.0),
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: const InputDecoration(
+                      icon: Icon(Icons.email_outlined),
+                      hintText: 'Email Address',
+                      labelText: 'Email'),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                  decoration: const InputDecoration(
+                      icon: Icon(Icons.password_outlined),
+                      hintText: 'New Password',
+                      labelText: 'New Password',
+                      labelStyle: TextStyle(color: Colors.black)),
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(
+                      icon: Icon(Icons.password_outlined),
+                      hintText: 'Confirm New Password',
+                      labelText: 'Confirm New Password',
+                      labelStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      )),
+                ),
+                SizedBox(height: 20,),
+                ElevatedButton(onPressed: null, child: Text('Sign up'), style: ButtonStyle()),
+              ],
+            ),
           ),
         ),
-     SizedBox(height:20),
-     TextFormField(
-       decoration: InputDecoration(
-         icon:Icon(Icons.password_outlined),
-         hintText: 'New Password',
-
-         labelText: 'New Password',
-         labelStyle: TextStyle(color: Colors.black)
-       ),
-     )
-      ],
-
-    ),
-
-    )
-    ,
-    )
-    ,
-    )
-    ,
-
+      ),
     );
   }
 }
